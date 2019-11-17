@@ -1,3 +1,5 @@
+#画蝴蝶#
+```
 import turtle as t
 def draw_recursive_wings(size):
     """绘制4个小翅膀"""
@@ -21,3 +23,34 @@ def main():
     t.exitonclick()
 if __name__ == "__main__" :
 	main()
+```
+
+
+
+```
+#画小树#
+import turtle
+
+def draw_branch(branch_length):
+    if branch_length>=5:
+        #绘制右侧树枝
+        turtle.forward(branch_length)
+        turtle.right(20)
+        draw_branch(branch_length-5)
+        #绘制左侧树枝
+        turtle.left(40)
+        draw_branch(branch_length-5)
+        #返回根节点
+        turtle.right(20)
+        turtle.backward(branch_length)
+def main():
+    turtle.penup()
+    turtle.backward(40)
+    turtle.pendown()
+    turtle.left(90)
+    turtle.pencolor("pink")
+    draw_branch(50)
+    turtle.done()
+if __name__ == "__main__" :
+    main()
+```
